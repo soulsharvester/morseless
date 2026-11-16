@@ -1,0 +1,230 @@
+{
+    "activeFile": "schop_one.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "BIGWINDOW.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Brick_Wall_Cracked.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Brick_wall.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_BuildingTiles_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Terrain_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Walls_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "PAVEMENT.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Pixel Interiors 32x32pxl.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "SNOW.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TILESET INDOORS +Bathroom.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilemap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "cafe.tmx": {
+            "scale": 1.361171875,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 320.3122309590771,
+                "y": 239.86684267921714
+            }
+        },
+        "classic_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "elevator.tmx": {
+            "scale": 3.265625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 128,
+                "y": 127.84688995215309
+            }
+        },
+        "friend_house_basement.tmx": {
+            "scale": 0.3949,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 612.8133704735377,
+                "y": 874.905039250443
+            }
+        },
+        "friend_house_first.tmx": {
+            "scale": 1.361171875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 320.3122309590771,
+                "y": 239.86684267921714
+            }
+        },
+        "friend_house_ground.tmx": {
+            "scale": 1.0889375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 400.3902886988464,
+                "y": 320.0367330540092
+            }
+        },
+        "makeshift_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "makeshift_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "office_place.tmx": {
+            "scale": 0.6805859375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 640.6244619181542,
+                "y": 479.7336853584343
+            }
+        },
+        "outside_player_house.tmx": {
+            "scale": 0.6776171875,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 650.8099383178649,
+                "y": 489.2142733613881
+            }
+        },
+        "player_house.tmx": {
+            "scale": 1.8069791666666666,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 239.9031532829884,
+                "y": 191.4797947771949
+            }
+        },
+        "professional_kitchen.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "reception.tmx": {
+            "scale": 1.0889375,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 400.3902886988464,
+                "y": 320.0367330540092
+            }
+        },
+        "road_five.tmx": {
+            "scale": 0.6805859375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 640.6244619181542,
+                "y": 400.39028869884635
+            }
+        },
+        "road_four.tmx": {
+            "scale": 0.8708333333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 320.38277511961724,
+                "y": 479.42583732057426
+            }
+        },
+        "road_one.tmx": {
+            "scale": 0.54209375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 799.6771776099613,
+                "y": 479.62183662881176
+            }
+        },
+        "road_three.tmx": {
+            "scale": 0.7778124999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 560.546404178385,
+                "y": 400.48212133386903
+            }
+        },
+        "road_two.tmx": {
+            "scale": 0.6805859375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 639.1551397577916,
+                "y": 479.7336853584343
+            }
+        },
+        "schop_one.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1152,
+                "y": 275.33333333333326
+            }
+        },
+        "snow_nature_tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Terrain",
+    "map.height": 50,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 50,
+    "openFiles": [
+        "player_house.tmx",
+        "outside_player_house.tmx",
+        "road_one.tmx",
+        "road_two.tmx",
+        "schop_one.tmx",
+        "Office_Walls_32x32.tsx",
+        "BIGWINDOW.tsx",
+        "Brick_wall.tsx",
+        "Brick_Wall_Cracked.tsx",
+        "snow_nature_tileset.tsx",
+        "Tilemap.tsx",
+        "PAVEMENT.tsx",
+        "SNOW.tsx",
+        "professional_kitchen.tsx",
+        "Office_BuildingTiles_32x32.tsx",
+        "Office_Terrain_32x32.tsx",
+        "reception.tmx",
+        "Pixel Interiors 32x32pxl.tsx",
+        "TILESET INDOORS +Bathroom.tsx"
+    ],
+    "project": "morseless_maps.tiled-project",
+    "recentFiles": [
+        "player_house.tmx",
+        "outside_player_house.tmx",
+        "road_one.tmx",
+        "road_two.tmx",
+        "TILESET INDOORS +Bathroom.tsx",
+        "Pixel Interiors 32x32pxl.tsx",
+        "reception.tmx",
+        "Office_Terrain_32x32.tsx",
+        "Office_BuildingTiles_32x32.tsx",
+        "professional_kitchen.tsx",
+        "SNOW.tsx",
+        "PAVEMENT.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

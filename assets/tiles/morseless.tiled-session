@@ -1,0 +1,86 @@
+{
+    "activeFile": "player_house.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Building Tiles 32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "GandalfHardcore city tiles 32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Interiors_free_16x16.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Morseless_Tiles.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "Morseless_Urban.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "classic_furnitureset.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "classic_room_door_tiles.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "makeshift_furnitureset.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "makeshift_room_door_tiles.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "midcentury_modern_furnitureset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "player_house.tmx": {
+            "scale": 1.8069791666666666,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 240.17985818873584,
+                "y": 191.75649968294232
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Urban",
+    "map.height": 12,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 15,
+    "openFiles": [
+        "makeshift_room_door_tiles.tsx",
+        "player_house.tmx",
+        "classic_room_door_tiles.tsx",
+        "classic_furnitureset.tsx",
+        "makeshift_furnitureset.tsx"
+    ],
+    "project": "morseless.tiled-project",
+    "recentFiles": [
+        "makeshift_room_door_tiles.tsx",
+        "makeshift_furnitureset.tsx",
+        "classic_furnitureset.tsx",
+        "classic_room_door_tiles.tsx",
+        "player_house.tmx",
+        "midcentury_modern_furnitureset.tsx",
+        "GandalfHardcore city tiles 32x32.tsx",
+        "Building Tiles 32x32.tsx",
+        "Interiors_free_16x16.tsx",
+        "Morseless_Tiles.tsx",
+        "Morseless_Urban.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

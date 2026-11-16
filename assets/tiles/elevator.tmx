@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="PAVEMENT.tsx"/>
+ <tileset firstgid="2" source="Office_Walls_32x32.tsx"/>
+ <tileset firstgid="184" source="classic_furnitureset.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="8" height="8">
+  <data encoding="csv">
+123,123,123,123,123,123,123,123,
+123,123,123,123,123,123,123,123,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="8" height="8">
+  <data encoding="csv">
+20,32,32,32,32,32,32,21,
+19,0,0,0,0,0,0,17,
+19,0,0,0,0,0,0,17,
+19,0,0,0,0,0,0,17,
+19,0,0,0,0,0,0,17,
+19,0,0,0,0,0,0,17,
+19,0,0,0,0,0,0,17,
+34,4,4,9,9,4,4,35
+</data>
+ </layer>
+ <layer id="3" name="Tile Layer 3" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,259,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
