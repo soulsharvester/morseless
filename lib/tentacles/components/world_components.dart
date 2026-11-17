@@ -62,31 +62,171 @@ class InteractableZone extends PositionComponent {
   }
 }
 
-class PlayerComponent extends PositionComponent
+enum PlayerAnimState {
+  idleRight,
+  idleUp,
+  idleLeft,
+  idleDown,
+  walkRight,
+  walkUp,
+  walkLeft,
+  walkDown,
+}
+
+enum FacingDirection { right, up, left, down }
+
+class PlayerComponent extends SpriteAnimationGroupComponent<PlayerAnimState>
     with HasGameRef<MorselessGame>, CollisionCallbacks, KeyboardHandler {
   bool canMove = true;
   final double speed = 115.0;
   Vector2 moveDirection = Vector2.zero();
   Vector2 _lastValidPosition = Vector2.zero();
+  FacingDirection facing = FacingDirection.down;
 
-  PlayerComponent({required super.position}) : super(size: Vector2(24, 32)) {
-    add(RectangleComponent(
-      size: Vector2(24, 32),
-      paint: Paint()..color = Colors.blueGrey.shade200,
-    ));
+  static final Vector2 frameSize = Vector2(16, 32);
+
+  PlayerComponent({required super.position}) : super(size: Vector2(24, 48));
+
+  @override
+  Future<void> onLoad() async {
+    try {
+      final idleSheet = await gameRef.images.load('Characters/Alex_idle_anim_16x16.png');
+      final runSheet = await gameRef.images.load('Characters/Alex_run_16x16.png');
+
+      animations = {
+        PlayerAnimState.idleRight: SpriteAnimation.fromFrameData(
+          idleSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.16,
+            textureSize: frameSize,
+            texturePosition: Vector2(0, 0),
+          ),
+        ),
+        PlayerAnimState.idleUp: SpriteAnimation.fromFrameData(
+          idleSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.16,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 6, 0),
+          ),
+        ),
+        PlayerAnimState.idleLeft: SpriteAnimation.fromFrameData(
+          idleSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.16,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 12, 0),
+          ),
+        ),
+        PlayerAnimState.idleDown: SpriteAnimation.fromFrameData(
+          idleSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.16,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 18, 0),
+          ),
+        ),
+
+        PlayerAnimState.walkRight: SpriteAnimation.fromFrameData(
+          runSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.11,
+            textureSize: frameSize,
+            texturePosition: Vector2(0, 0),
+          ),
+        ),
+        PlayerAnimState.walkUp: SpriteAnimation.fromFrameData(
+          runSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.11,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 6, 0),
+          ),
+        ),
+        PlayerAnimState.walkLeft: SpriteAnimation.fromFrameData(
+          runSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.11,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 12, 0),
+          ),
+        ),
+        PlayerAnimState.walkDown: SpriteAnimation.fromFrameData(
+          runSheet,
+          SpriteAnimationData.sequenced(
+            amount: 6,
+            stepTime: 0.11,
+            textureSize: frameSize,
+            texturePosition: Vector2(16 * 18, 0),
+          ),
+        ),
+      };
+
+      current = PlayerAnimState.idleDown;
+    } catch (e) {
+      debugPrint('Failed to load Alex spritesheets ($e). Using fallback box.');
+      add(RectangleComponent(
+        size: size,
+        paint: Paint()..color = Colors.blueGrey.shade200,
+      ));
+    }
+
     add(RectangleHitbox(
-      size: Vector2(18, 14),
-      position: Vector2(3, 18),
+      size: Vector2(16, 14),
+      position: Vector2(4, 34),
     ));
   }
 
   @override
   void update(double dt) {
     super.update(dt);
-    if (!canMove || moveDirection == Vector2.zero()) return;
+
+    if (!canMove || moveDirection == Vector2.zero()) {
+      _setIdleAnimation();
+      return;
+    }
+
+    if (moveDirection.x > 0) {
+      facing = FacingDirection.right;
+      if (animations != null) current = PlayerAnimState.walkRight;
+    } else if (moveDirection.x < 0) {
+      facing = FacingDirection.left;
+      if (animations != null) current = PlayerAnimState.walkLeft;
+    } else if (moveDirection.y < 0) {
+      facing = FacingDirection.up;
+      if (animations != null) current = PlayerAnimState.walkUp;
+    } else if (moveDirection.y > 0) {
+      facing = FacingDirection.down;
+      if (animations != null) current = PlayerAnimState.walkDown;
+    }
 
     _lastValidPosition = position.clone();
     position += moveDirection.normalized() * speed * dt;
+  }
+
+  void _setIdleAnimation() {
+    if (animations == null) return;
+    switch (facing) {
+      case FacingDirection.right:
+        current = PlayerAnimState.idleRight;
+        break;
+      case FacingDirection.up:
+        current = PlayerAnimState.idleUp;
+        break;
+      case FacingDirection.left:
+        current = PlayerAnimState.idleLeft;
+        break;
+      case FacingDirection.down:
+        current = PlayerAnimState.idleDown;
+        break;
+    }
   }
 
   @override

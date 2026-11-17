@@ -1,5 +1,5 @@
 {
-    "activeFile": "schop_one.tmx",
+    "activeFile": "friend_house_first.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -127,7 +127,7 @@
             "scale": 1.361171875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 320.6795614991678,
+                "x": 432.34804568673593,
                 "y": 239.86684267921714
             }
         },
@@ -251,40 +251,36 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 50,
     "openFiles": [
-        "player_house.tmx",
+        "cafe.tmx",
+        "elevator.tmx",
+        "friend_house_basement.tmx",
+        "friend_house_first.tmx",
+        "friend_house_ground.tmx",
+        "office_place.tmx",
         "outside_player_house.tmx",
-        "road_one.tmx",
-        "road_two.tmx",
-        "schop_one.tmx",
-        "Office_Walls_32x32.tsx",
-        "BIGWINDOW.tsx",
-        "Brick_wall.tsx",
-        "Brick_Wall_Cracked.tsx",
-        "snow_nature_tileset.tsx",
-        "Tilemap.tsx",
-        "PAVEMENT.tsx",
-        "SNOW.tsx",
-        "professional_kitchen.tsx",
-        "Office_BuildingTiles_32x32.tsx",
-        "Office_Terrain_32x32.tsx",
+        "player_house.tmx",
         "reception.tmx",
-        "Pixel Interiors 32x32pxl.tsx",
-        "TILESET INDOORS +Bathroom.tsx"
+        "road_five.tmx",
+        "road_four.tmx",
+        "road_one.tmx",
+        "road_three.tmx",
+        "road_two.tmx",
+        "schop_one.tmx"
     ],
     "project": "morseless_maps.tiled-project",
     "recentFiles": [
-        "tilesetOpenGameBackground.tsx",
-        "Sky Platform Deco Set.tsx",
-        "black.tsx",
-        "sky.tmx",
+        "cafe.tmx",
+        "elevator.tmx",
         "friend_house_basement.tmx",
-        "Wooden_Floor_Horizontal.tsx",
-        "player_house.tmx",
-        "outside_player_house.tmx",
-        "road_one.tmx",
-        "road_two.tmx",
         "schop_one.tmx",
-        "Office_Walls_32x32.tsx"
+        "road_two.tmx",
+        "road_three.tmx",
+        "road_one.tmx",
+        "road_four.tmx",
+        "road_five.tmx",
+        "reception.tmx",
+        "player_house.tmx",
+        "outside_player_house.tmx"
     ],
     "tileset.lastUsedFormat": "tsx"
 }
