@@ -1,3 +1,4 @@
+import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 
@@ -42,7 +43,6 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                 },
               );
             },
-
             'DialogueOverlay': (context, game) {
               return ValueListenableBuilder<DialogueLine?>(
                 valueListenable: game.activeDialogue,
@@ -143,17 +143,32 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                 },
               );
             },
-
             'JumpscareOverlay': (context, game) {
               return ValueListenableBuilder<String?>(
                 valueListenable: game.activeJumpscare,
-                builder: (context, asset, _) {
-                  if (asset == null) return const SizedBox.shrink();
-                  if (asset == 'FLASH_FALLBACK') {
-                    return Container(color: Colors.red.shade900.withOpacity(0.85));
+                builder: (context, assetName, _) {
+                  if (assetName == null) return const SizedBox.shrink();
+                  if (assetName == 'FLASH_FALLBACK') {
+                    return Container(color: Colors.red.withOpacity(0.85));
                   }
-                  return SizedBox.expand(
-                    child: Image.asset(asset, fit: BoxFit.cover),
+                  return Container(
+                    color: Colors.black,
+                    child: Center(
+                      child: SizedBox(
+                        width: 650,
+                        height: 500,
+                        child: SpriteAnimationWidget.asset(
+                          path: assetName,
+                          data: SpriteAnimationData.sequenced(
+                            amount: 24,
+                            stepTime: 0.025,
+                            textureSize: Vector2(325, 250),
+                            loop: false,
+                          ),
+                          images: game.images,
+                        ),
+                      ),
+                    ),
                   );
                 },
               );

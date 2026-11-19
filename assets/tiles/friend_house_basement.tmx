@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="6">
  <tileset firstgid="1" source="black.tsx"/>
  <tileset firstgid="17" source="fancy_mansion_room_door_tiles.tsx"/>
  <tileset firstgid="233" source="makeshift_room_door_tiles.tsx"/>
@@ -172,4 +172,33 @@
 37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37
 </data>
  </layer>
+ <objectgroup id="4" name="Interactables"/>
+ <objectgroup id="5" name="Portals">
+  <properties>
+   <property name="lockMessage" value=""/>
+   <property name="locked" type="bool" value="false"/>
+   <property name="maxScene" type="int" value="0"/>
+   <property name="minScene" type="int" value="0"/>
+   <property name="spawnX" type="float" value="0"/>
+   <property name="spawnY" type="float" value="0"/>
+   <property name="targetMap" value=""/>
+  </properties>
+  <object id="5" x="807.799" y="1068.62" width="25.3229" height="50.6457">
+   <properties>
+    <property name="lockMessage" value=""/>
+    <property name="locked" type="bool" value="false"/>
+    <property name="maxScene" type="int" value="0"/>
+    <property name="minScene" type="int" value="0"/>
+    <property name="spawnX" type="float" value="625"/>
+    <property name="spawnY" type="float" value="124"/>
+    <property name="targetMap" value="friend_house_ground.tmx"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Collisions">
+  <object id="1" x="-5.06457" y="-30.3874" width="1625.73" height="73.4363"/>
+  <object id="2" x="-17.726" y="15.1937" width="50.6457" height="1613.07"/>
+  <object id="3" x="-5.06457" y="1559.89" width="1630.79" height="73.4363"/>
+  <object id="4" x="1562.42" y="-68.3717" width="48.1134" height="1656.12"/>
+ </objectgroup>
 </map>

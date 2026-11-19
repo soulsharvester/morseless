@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="36">
  <tileset firstgid="1" source="snow_nature_tileset.tsx"/>
  <tileset firstgid="131" source="Tilemap.tsx"/>
  <tileset firstgid="1571" source="makeshift_room_door_tiles.tsx"/>
@@ -106,4 +106,70 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,86,0,0,81,82,0,0,0
 </data>
  </layer>
+ <objectgroup id="4" name="Interactables"/>
+ <objectgroup id="5" name="Portals">
+  <properties>
+   <property name="lockMessage" value=""/>
+   <property name="locked" type="bool" value="false"/>
+   <property name="maxScene" type="int" value="0"/>
+   <property name="minScene" type="int" value="0"/>
+   <property name="spawnX" type="float" value="0"/>
+   <property name="spawnY" type="float" value="0"/>
+   <property name="targetMap" value=""/>
+  </properties>
+  <object id="31" x="1121.58" y="0" width="258.258" height="12.9129">
+   <properties>
+    <property name="lockMessage" value=""/>
+    <property name="locked" type="bool" value="false"/>
+    <property name="maxScene" type="int" value="0"/>
+    <property name="minScene" type="int" value="0"/>
+    <property name="spawnX" type="float" value="943"/>
+    <property name="spawnY" type="float" value="890"/>
+    <property name="targetMap" value="road_two.tmx"/>
+   </properties>
+  </object>
+  <object id="33" x="-3.6894" y="697.296" width="12.9129" height="276.705">
+   <properties>
+    <property name="lockMessage" value=""/>
+    <property name="locked" type="bool" value="false"/>
+    <property name="maxScene" type="int" value="0"/>
+    <property name="minScene" type="int" value="0"/>
+    <property name="spawnX" type="float" value="1243"/>
+    <property name="spawnY" type="float" value="850"/>
+    <property name="targetMap" value="outside_player_house.tmx"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Collisions">
+  <object id="1" x="-12.9129" y="-18.447" width="302.531" height="260.103"/>
+  <object id="2" x="282.239" y="-14.7576" width="99.6138" height="36.894"/>
+  <object id="3" x="374.474" y="-33.2046" width="306.22" height="263.792"/>
+  <object id="4" x="675.16" y="-18.447" width="77.4774" height="29.5152"/>
+  <object id="5" x="750.793" y="-16.6023" width="190.004" height="23.9811"/>
+  <object id="6" x="774.774" y="-9.2235" width="280.394" height="245.345"/>
+  <object id="7" x="1049.63" y="-12.9129" width="64.5645" height="66.4092"/>
+  <object id="8" x="1377.99" y="-11.0682" width="84.8562" height="70.0986"/>
+  <object id="9" x="-27.6705" y="230.587" width="40.5834" height="468.554"/>
+  <object id="10" x="-31.3599" y="695.452" width="27.6705" height="269.326"/>
+  <object id="12" x="-25.8258" y="961.088" width="1534.79" height="42.4281"/>
+  <object id="13" x="1223.04" y="924.194" width="381.853" height="90.3903"/>
+  <object id="14" x="1416.73" y="807.978" width="191.849" height="103.303"/>
+  <object id="15" x="1457.31" y="675.16" width="160.489" height="55.341"/>
+  <object id="16" x="1520.03" y="778.463" width="33.2046" height="22.1364"/>
+  <object id="17" x="1477.6" y="0" width="123.595" height="94.0797"/>
+  <object id="18" x="1424.11" y="51.6516" width="103.303" height="33.2046"/>
+  <object id="19" x="1488.67" y="81.1668" width="42.4281" height="25.8258"/>
+  <object id="20" x="1488.67" y="158.644" width="101.458" height="81.1668"/>
+  <object id="21" x="1556.93" y="239.811" width="47.9622" height="38.7387"/>
+  <object id="22" x="1520.03" y="291.463" width="49.8069" height="57.1857"/>
+  <object id="23" x="1569.84" y="335.735" width="36.894" height="29.5152"/>
+  <object id="24" x="1527.41" y="381.853" width="60.8751" height="90.3903"/>
+  <object id="25" x="1461" y="461.175" width="143.887" height="73.788"/>
+  <object id="27" x="1457.31" y="582.925" width="46.1175" height="51.6516"/>
+  <object id="28" x="1555.08" y="595.838" width="36.894" height="49.8069"/>
+  <object id="29" x="1593.82" y="0" width="35.0493" height="1003.52"/>
+  <object id="30" x="1047.79" y="-55.341" width="413.213" height="49.8069"/>
+  <object id="34" x="162.334" y="348.648" width="284.084" height="239.811"/>
+  <object id="35" x="544.186" y="352.338" width="289.618" height="234.277"/>
+ </objectgroup>
 </map>

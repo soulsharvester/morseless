@@ -1,5 +1,5 @@
 {
-    "activeFile": "friend_house_first.tmx",
+    "activeFile": "begin.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -60,6 +60,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "TALLGRASS.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "TILESET INDOORS +Bathroom.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -84,27 +88,42 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "begin.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 678.5,
+                "y": 560.5
+            }
+        },
         "black.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "cafe.tmx": {
-            "scale": 1.361171875,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 1.1139,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 320.6795614991678,
-                "y": 239.86684267921714
+                "x": 319.5978094981596,
+                "y": 239.24948379567292
             }
         },
         "classic_furnitureset.tsx": {
             "scaleInDock": 1
         },
         "elevator.tmx": {
-            "scale": 3.265625,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
+            "scale": 2.6635,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 128.1531100478469,
-                "y": 127.84688995215309
+                "x": 127.83930917965084,
+                "y": 127.83930917965084
             }
         },
         "fancy_mansion_furnitureset.tsx": {
@@ -116,27 +135,39 @@
             "scaleInEditor": 1
         },
         "friend_house_basement.tmx": {
+            "expandedObjectLayers": [
+                5,
+                6
+            ],
             "scale": 0.3949,
-            "selectedLayer": 1,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 614.0795138009623,
-                "y": 874.905039250443
+                "x": 798.9364396049633,
+                "y": 800.2025829323879
             }
         },
         "friend_house_first.tmx": {
-            "scale": 1.361171875,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                5,
+                6
+            ],
+            "scale": 1.1969,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 432.34804568673593,
-                "y": 239.86684267921714
+                "x": 320.41106190993395,
+                "y": 240.20385997159326
             }
         },
         "friend_house_ground.tmx": {
-            "scale": 1.0889375,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                10,
+                11
+            ],
+            "scale": 1.1873,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 579.0047638179419,
-                "y": 320.0367330540092
+                "x": 399.64625621157245,
+                "y": 319.21165670007576
             }
         },
         "makeshift_furnitureset.tsx": {
@@ -146,27 +177,37 @@
             "scaleInDock": 1
         },
         "office_place.tmx": {
-            "scale": 0.6805859375,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                7,
+                6
+            ],
+            "scale": 1.0544,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 926.407622108707,
-                "y": 479.7336853584343
+                "x": 639.7003034901365,
+                "y": 479.4195751138087
             }
         },
         "outside_player_house.tmx": {
-            "scale": 0.6776171875,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                5
+            ],
+            "scale": 0.75,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 651.5478180665245,
-                "y": 489.2142733613881
+                "x": 1561.3333333333333,
+                "y": 479.33333333333326
             }
         },
         "player_house.tmx": {
+            "expandedObjectLayers": [
+                10
+            ],
             "scale": 1.8069791666666666,
-            "selectedLayer": 4,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 239.90315328298843,
-                "y": 191.2030898714475
+                "x": 187.60592609673142,
+                "y": 191.75649968294232
             }
         },
         "professional_kitchen.tsx": {
@@ -174,59 +215,86 @@
             "scaleInEditor": 1
         },
         "reception.tmx": {
-            "scale": 1.0889375,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 0.75,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 400.84945187395977,
-                "y": 320.0367330540092
+                "x": 400.66666666666663,
+                "y": 320
             }
         },
         "road_five.tmx": {
-            "scale": 0.6805859375,
-            "selectedLayer": 3,
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 0.8253,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 641.3591229983356,
-                "y": 400.39028869884635
+                "x": 640.9790379256027,
+                "y": 399.248758027384
             }
         },
         "road_four.tmx": {
-            "scale": 0.8708333333333332,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 0.7434,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 320.9569377990431,
-                "y": 479.42583732057426
+                "x": 318.80548829701377,
+                "y": 479.55340328221683
             }
         },
         "road_one.tmx": {
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
             "scale": 0.54209375,
-            "selectedLayer": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 799.6771776099613,
+                "x": 1197.2098922003802,
                 "y": 478.69948694298716
             }
         },
         "road_three.tmx": {
-            "scale": 0.7778124999999999,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
+            "scale": 0.9259,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 561.1892326235436,
-                "y": 400.48212133386903
+                "x": 307.8086186413219,
+                "y": 415.2716276055729
             }
         },
         "road_two.tmx": {
+            "expandedObjectLayers": [
+                7,
+                8
+            ],
             "scale": 0.6805859375,
-            "selectedLayer": 3,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 924.9382999483444,
-                "y": 479.7336853584343
+                "x": 639.8898008379729,
+                "y": 480.46834643861564
             }
         },
         "schop_one.tmx": {
-            "scale": 0.75,
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
+            "scale": 0.4406,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1152.6666666666665,
-                "y": 275.33333333333326
+                "x": 806.854289605084,
+                "y": 713.7993645029505
             }
         },
         "sky.tmx": {
@@ -247,40 +315,36 @@
         }
     },
     "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Terrain",
-    "map.height": 50,
+    "map.height": 30,
     "map.lastUsedFormat": "tmx",
-    "map.width": 50,
+    "map.width": 40,
     "openFiles": [
-        "cafe.tmx",
-        "elevator.tmx",
+        "friend_house_ground.tmx",
         "friend_house_basement.tmx",
         "friend_house_first.tmx",
-        "friend_house_ground.tmx",
         "office_place.tmx",
-        "outside_player_house.tmx",
-        "player_house.tmx",
         "reception.tmx",
-        "road_five.tmx",
-        "road_four.tmx",
-        "road_one.tmx",
-        "road_three.tmx",
         "road_two.tmx",
-        "schop_one.tmx"
+        "elevator.tmx",
+        "schop_one.tmx",
+        "begin.tmx",
+        "TALLGRASS.tsx"
     ],
     "project": "morseless_maps.tiled-project",
+    "property.type": "string",
     "recentFiles": [
-        "cafe.tmx",
-        "elevator.tmx",
+        "friend_house_ground.tmx",
         "friend_house_basement.tmx",
-        "schop_one.tmx",
-        "road_two.tmx",
-        "road_three.tmx",
-        "road_one.tmx",
-        "road_four.tmx",
-        "road_five.tmx",
+        "friend_house_first.tmx",
+        "office_place.tmx",
         "reception.tmx",
-        "player_house.tmx",
-        "outside_player_house.tmx"
+        "road_two.tmx",
+        "elevator.tmx",
+        "schop_one.tmx",
+        "TALLGRASS.tsx",
+        "begin.tmx",
+        "road_one.tmx",
+        "player_house.tmx"
     ],
     "tileset.lastUsedFormat": "tsx"
 }
