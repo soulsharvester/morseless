@@ -1,9 +1,13 @@
 {
-    "activeFile": "begin.tmx",
+    "activeFile": "office_place.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "fileStates": {
+        "Alex_16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "BIGWINDOW.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -181,11 +185,11 @@
                 7,
                 6
             ],
-            "scale": 1.0544,
-            "selectedLayer": 5,
+            "scale": 2.4009,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 639.7003034901365,
-                "y": 479.4195751138087
+                "x": 371.73559915031865,
+                "y": 344.6624182598192
             }
         },
         "outside_player_house.tmx": {
@@ -314,10 +318,10 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Terrain",
-    "map.height": 30,
+    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Characters",
+    "map.height": 40,
     "map.lastUsedFormat": "tmx",
-    "map.width": 40,
+    "map.width": 50,
     "openFiles": [
         "friend_house_ground.tmx",
         "friend_house_basement.tmx",
@@ -328,7 +332,9 @@
         "elevator.tmx",
         "schop_one.tmx",
         "begin.tmx",
-        "TALLGRASS.tsx"
+        "TALLGRASS.tsx",
+        "SNOW.tsx",
+        "Alex_16x16.tsx"
     ],
     "project": "morseless_maps.tiled-project",
     "property.type": "string",
@@ -336,15 +342,19 @@
         "friend_house_ground.tmx",
         "friend_house_basement.tmx",
         "friend_house_first.tmx",
-        "office_place.tmx",
-        "reception.tmx",
-        "road_two.tmx",
-        "elevator.tmx",
-        "schop_one.tmx",
+        "Alex_16x16.tsx",
+        "SNOW.tsx",
         "TALLGRASS.tsx",
         "begin.tmx",
-        "road_one.tmx",
-        "player_house.tmx"
+        "schop_one.tmx",
+        "elevator.tmx",
+        "road_two.tmx",
+        "reception.tmx",
+        "office_place.tmx"
     ],
-    "tileset.lastUsedFormat": "tsx"
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }

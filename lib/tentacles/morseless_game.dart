@@ -25,10 +25,12 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
   final ValueNotifier<InteractableZone?> nearbyPrompt = ValueNotifier(null);
 
   List<DialogueLine> _dialogueQueue = [];
+  static const double defaultZoom = 3.0;
 
   @override
   Future<void> onLoad() async {
     camera.viewfinder.anchor = Anchor.center;
+    camera.viewfinder.zoom = defaultZoom;
     await Future.wait([
       images.load('Jumpscare.png'),
       FlameAudio.audioCache.load('jumpscare.wav'),
@@ -64,6 +66,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     player = PlayerComponent(position: Vector2(spawnX, spawnY));
     await world.add(player);
     camera.follow(player);
+    camera.viewfinder.zoom = defaultZoom;
 
     await Future.delayed(const Duration(milliseconds: 150));
     isTransitioning.value = false;

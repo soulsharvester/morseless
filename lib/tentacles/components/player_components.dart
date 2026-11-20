@@ -31,7 +31,7 @@ class PlayerComponent extends SpriteAnimationGroupComponent<PlayerAnimState>
 
   static final Vector2 frameSize = Vector2(16, 32);
 
-  PlayerComponent({required super.position}) : super(size: Vector2(24, 48));
+  PlayerComponent({required super.position}) : super(size: Vector2(24, 48), anchor: Anchor.center);
 
   @override
   Future<void> onLoad() async {
@@ -129,14 +129,14 @@ class PlayerComponent extends SpriteAnimationGroupComponent<PlayerAnimState>
 
     add(RectangleHitbox(
       size: Vector2(16, 14),
-      position: Vector2(4, 34),
+      position: Vector2(-8, 10),
     ));
   }
 
   bool _canMoveTo(Vector2 newPosition) {
     final proposedFeetRect = Rect.fromLTWH(
-      newPosition.x + 4,
-      newPosition.y + 34,
+      newPosition.x - 8,
+      newPosition.y + 10,
       16,
       14,
     );
