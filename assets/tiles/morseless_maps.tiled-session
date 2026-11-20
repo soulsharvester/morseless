@@ -158,14 +158,14 @@
             "scale": 1.1969,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 320.41106190993395,
-                "y": 240.20385997159326
+                "x": 320.411061909934,
+                "y": 239.78611412816446
             }
         },
         "friend_house_ground.tmx": {
             "expandedObjectLayers": [
-                10,
-                11
+                11,
+                10
             ],
             "scale": 1.1873,
             "selectedLayer": 6,
@@ -185,11 +185,11 @@
                 7,
                 6
             ],
-            "scale": 2.4009,
+            "scale": 0.5,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 371.73559915031865,
-                "y": 344.6624182598192
+                "x": 587,
+                "y": 171
             }
         },
         "outside_player_house.tmx": {
@@ -279,8 +279,8 @@
         },
         "road_two.tmx": {
             "expandedObjectLayers": [
-                7,
-                8
+                8,
+                7
             ],
             "scale": 0.6805859375,
             "selectedLayer": 5,
@@ -297,8 +297,8 @@
             "scale": 0.4406,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 806.854289605084,
-                "y": 713.7993645029505
+                "x": 800.0453926463913,
+                "y": 640.0363141171131
             }
         },
         "sky.tmx": {

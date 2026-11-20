@@ -160,8 +160,8 @@
     <property name="locked" type="bool" value="false"/>
     <property name="maxScene" type="int" value="0"/>
     <property name="minScene" type="int" value="0"/>
-    <property name="spawnX" type="float" value="128"/>
-    <property name="spawnY" type="float" value="218"/>
+    <property name="spawnX" type="float" value="129"/>
+    <property name="spawnY" type="float" value="135"/>
     <property name="targetMap" value="elevator.tmx"/>
    </properties>
   </object>

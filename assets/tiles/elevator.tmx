@@ -50,7 +50,7 @@
    <property name="spawnY" type="float" value="0"/>
    <property name="targetMap" value=""/>
   </properties>
-  <object id="9" x="96.865" y="249.296" width="62.6995" height="5.25624">
+  <object id="9" x="96.865" y="244.791" width="62.6995" height="9.76159">
    <properties>
     <property name="lockMessage" value=""/>
     <property name="locked" type="bool" value="false"/>
@@ -58,7 +58,7 @@
     <property name="minScene" type="int" value="0"/>
     <property name="spawnX" type="float" value="73"/>
     <property name="spawnY" type="float" value="181"/>
-    <property name="targetMap" value="office_place.tmx"/>
+    <property name="targetMap" value="reception.tmx"/>
    </properties>
   </object>
  </objectgroup>
