@@ -93,11 +93,15 @@
             "scaleInEditor": 1
         },
         "begin.tmx": {
-            "scale": 1,
+            "expandedObjectLayers": [
+                3,
+                4
+            ],
+            "scale": 1.5,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 678.5,
-                "y": 560.5
+                "x": 640.3333333333333,
+                "y": 480
             }
         },
         "black.tsx": {
@@ -126,8 +130,8 @@
             "scale": 2.6635,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 127.83930917965084,
-                "y": 127.83930917965084
+                "x": 127.83930917965085,
+                "y": 128.0270321006195
             }
         },
         "fancy_mansion_furnitureset.tsx": {
@@ -140,8 +144,8 @@
         },
         "friend_house_basement.tmx": {
             "expandedObjectLayers": [
-                5,
-                6
+                6,
+                5
             ],
             "scale": 0.3949,
             "selectedLayer": 4,
@@ -152,8 +156,8 @@
         },
         "friend_house_first.tmx": {
             "expandedObjectLayers": [
-                5,
-                6
+                6,
+                5
             ],
             "scale": 1.1969,
             "selectedLayer": 4,
@@ -164,8 +168,8 @@
         },
         "friend_house_ground.tmx": {
             "expandedObjectLayers": [
-                11,
-                10
+                10,
+                11
             ],
             "scale": 1.1873,
             "selectedLayer": 6,
@@ -182,14 +186,14 @@
         },
         "office_place.tmx": {
             "expandedObjectLayers": [
-                7,
-                6
+                6,
+                7
             ],
-            "scale": 0.5,
-            "selectedLayer": 6,
+            "scale": 0.75,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 587,
-                "y": 171
+                "x": 624.6666666666666,
+                "y": 437.99999999999994
             }
         },
         "outside_player_house.tmx": {
@@ -279,8 +283,8 @@
         },
         "road_two.tmx": {
             "expandedObjectLayers": [
-                8,
-                7
+                7,
+                8
             ],
             "scale": 0.6805859375,
             "selectedLayer": 5,
@@ -337,7 +341,7 @@
         "Alex_16x16.tsx"
     ],
     "project": "morseless_maps.tiled-project",
-    "property.type": "string",
+    "property.type": "bool",
     "recentFiles": [
         "friend_house_ground.tmx",
         "friend_house_basement.tmx",

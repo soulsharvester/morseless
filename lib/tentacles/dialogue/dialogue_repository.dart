@@ -50,6 +50,48 @@ class DialogueRepository {
         setScene: 2,
       ),
     ],
+    'scene1_bed': [
+      DialogueLine(
+        speaker: 'james',
+        text: 'These beds are perfectly set, perfectly placed?',
+      ),
+    ],
+    'scene1_tv': [
+      DialogueLine(
+        speaker: 'james',
+        text: 'I used to play this game as a kid',
+      ),
+      DialogueLine(
+        speaker: 'james',
+        text: 'I think it was called something evil',
+      ),
+      DialogueLine(
+        speaker: 'james',
+        text: 'My parents had to sell the console though...',
+      ),
+      DialogueLine(
+        speaker: 'james',
+        text: 'whats it doing here?',
+      ),
+    ],
+    'scene1_door': [
+      DialogueLine(
+        speaker: 'james',
+        text: 'Whys there a door leading to nowhere?',
+      ),
+      DialogueLine(
+        speaker: 'james',
+        text: 'It smells like a factory, i can feel the cold radiating from it',
+      ),
+    ],
+    'scene1_bath': [
+      DialogueLine(
+        speaker: 'james',
+        text: 'i havent seen one of these for a while',
+      ),
+    ],
+
+
 
     'scene2_boss': [
       DialogueLine(speaker: 'Boss', text: 'Are you really sleeping again?'),

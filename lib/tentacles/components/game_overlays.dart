@@ -1,8 +1,10 @@
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
+import 'package:morseless/tentacles/dialogue/dialogue_exec.dart';
 
 import '../dialogue/dialogue_model.dart';
+import '../dialogue/dialogue_styles.dart';
 import '../morseless_game.dart';
 
 
@@ -19,7 +21,7 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
   @override
   void initState() {
     super.initState();
-    _game = MorselessGame();
+    _game = MorselessDialogueExec();
   }
 
   @override
@@ -49,6 +51,24 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                 builder: (context, line, _) {
                   if (line == null) return const SizedBox.shrink();
                   final hasOptions = line.options != null && line.options!.isNotEmpty;
+                  final style = DialogueStyles.forSpeaker(line.speaker);
+
+                  Widget buildSpeakerIcon() {
+                    final fallback = Icon(
+                      style.fallbackIcon,
+                      color: style.accentColor,
+                      size: 26,
+                    );
+                    if (style.iconAsset == null) return fallback;
+
+                    return Image.asset(
+                      style.iconAsset!,
+                      width: 44,
+                      height: 44,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => fallback,
+                    );
+                  }
 
                   return Align(
                     alignment: Alignment.bottomCenter,
@@ -63,7 +83,7 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                               margin: const EdgeInsets.only(bottom: 10),
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.92),
+                                color: style.backgroundColor,
                                 border: Border.all(color: Colors.white70, width: 2),
                               ),
                               child: Column(
@@ -98,43 +118,116 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                             child: Container(
                               padding: const EdgeInsets.all(18),
                               decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.92),
+                                color: style.backgroundColor,
                                 border: Border.all(color: Colors.white, width: 2),
                               ),
-                              child: Column(
+                              child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    line.speaker.toUpperCase(),
-                                    style: const TextStyle(
-                                      color: Colors.redAccent,
-                                      fontFamily: 'Courier',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1.5,
+                                  Container(
+                                    width: 48,
+                                    height: 48,
+                                    margin: const EdgeInsets.only(right: 14),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(0.5),
+                                      border: Border.all(color: style.accentColor, width: 1.5),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: buildSpeakerIcon(),
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          line.speaker.toUpperCase(),
+                                          style: TextStyle(
+                                            color: style.accentColor,
+                                            fontFamily: 'Courier',
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            letterSpacing: 1.5,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 8),
+                                        Text(
+                                          line.text,
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Courier',
+                                            fontSize: 17,
+                                            height: 1.4,
+                                          ),
+                                        ),
+                                        if (!hasOptions)
+                                          const Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              '▼',
+                                              style: TextStyle(color: Colors.white54, fontSize: 12),
+                                            ),
+                                          ),
+                                      ],
                                     ),
                                   ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    line.text,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Courier',
-                                      fontSize: 17,
-                                      height: 1.4,
-                                    ),
-                                  ),
-                                  if (!hasOptions)
-                                    const Align(
-                                      alignment: Alignment.bottomRight,
-                                      child: Text(
-                                        '▼',
-                                        style: TextStyle(color: Colors.white54, fontSize: 12),
-                                      ),
-                                    ),
                                 ],
                               ),
                             ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            'CutsceneOverlay': (context, game) {
+              return ValueListenableBuilder<SpriteAnimation?>(
+                valueListenable: game.activeCutsceneAnimation,
+                builder: (context, anim, _) {
+                  if (anim == null) return const SizedBox.shrink();
+                  final ticker = anim.createTicker();
+
+                  final frameSize = anim.frames.first.sprite.srcSize;
+
+                  return IgnorePointer(
+                    ignoring: true,
+                    child: Container(
+                      color: Colors.black,
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: [
+                          FittedBox(
+                            fit: BoxFit.cover,
+                            clipBehavior: Clip.hardEdge,
+                            child: SizedBox(
+                              width: frameSize.x,
+                              height: frameSize.y,
+                              child: SpriteAnimationWidget(
+                                animation: anim,
+                                animationTicker: ticker,
+                              ),
+                            ),
+                          ),
+
+                          ValueListenableBuilder<SpriteAnimation?>(
+                            valueListenable: game.activeCutsceneCharacter,
+                            builder: (context, charAnim, _) {
+                              if (charAnim == null) return const SizedBox.shrink();
+                              final charTicker = charAnim.createTicker();
+                              return Align(
+                                alignment: const Alignment(0.35, 0.1),
+                                child: SizedBox(
+                                  width: 96,
+                                  height: 192,
+                                  child: SpriteAnimationWidget(
+                                    animation: charAnim,
+                                    animationTicker: charTicker,
+                                    anchor: Anchor.center,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),

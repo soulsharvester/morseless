@@ -23,20 +23,11 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
   final ValueNotifier<DialogueLine?> activeDialogue = ValueNotifier(null);
   final ValueNotifier<String?> activeJumpscare = ValueNotifier(null);
   final ValueNotifier<InteractableZone?> nearbyPrompt = ValueNotifier(null);
+  final ValueNotifier<SpriteAnimation?> activeCutsceneAnimation = ValueNotifier(null);
+  final ValueNotifier<SpriteAnimation?> activeCutsceneCharacter = ValueNotifier(null);
 
   List<DialogueLine> _dialogueQueue = [];
   static const double defaultZoom = 3.0;
-
-  @override
-  Future<void> onLoad() async {
-    camera.viewfinder.anchor = Anchor.center;
-    camera.viewfinder.zoom = defaultZoom;
-    await Future.wait([
-      images.load('Jumpscare.png'),
-      FlameAudio.audioCache.load('jumpscare.wav'),
-    ]);
-    startSceneOneSequence();
-  }
 
   Future<void> loadMap(String mapFileName, {required double spawnX, required double spawnY}) async {
     isTransitioning.value = true;
@@ -54,6 +45,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
       _parseCollisions();
       _parsePortals();
       _parseInteractables();
+      await spawnNpcsForMap(fileName);
     } catch (e) {
       debugPrint('Map "$mapFileName" not found yet ($e). Loading fallback test room.');
       world.removeAll(world.children);
@@ -74,6 +66,45 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     overlays.remove('TransitionOverlay');
   }
 
+  Future<void> spawnNpcsForMap(String mapName) async {
+    world.children.whereType<NpcComponent>().forEach((npc) => npc.removeFromParent());
+
+    if (mapName == 'office_place.tmx') {
+      //Sara
+      await spawnGridNpc(
+        spriteAsset: 'Characters/Amelia_idle_anim_16x16.png',
+        position: Vector2(120, 180),
+        dialogueId: 'scene2_sara',
+        startCol: 0,
+        startRow: 2,
+      );
+      //Hamza
+      await spawnGridNpc(
+        spriteAsset: 'Characters/Bob_idle_anim_16x16.png',
+        position: Vector2(260, 180),
+        dialogueId: 'scene2_hamza',
+        startCol: 0,
+        startRow: 0,
+      );
+      //Chan
+      await spawnGridNpc(
+        spriteAsset: 'Characters/char_poke_2.png',
+        position: Vector2(120, 260),
+        dialogueId: 'scene2_chan',
+        startCol: 9,
+        startRow: 1,
+      );
+      //Mitchell
+      await spawnGridNpc(
+        spriteAsset: 'Characters/char_poke_2.png',
+        position: Vector2(260, 260),
+        dialogueId: 'scene2_mitchell',
+        startCol: 0,
+        startRow: 6,
+      );
+    }
+  }
+
   void _parseCollisions() {
     final group = currentMap?.tileMap.getLayer<ObjectGroup>('Collisions');
     if (group == null) return;
@@ -85,7 +116,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     }
   }
 
-  Future<void> _showDialogueAndWait(String dialogueId) async {
+  Future<void> showDialogueAndWait(String dialogueId) async {
     final lines = DialogueRepository.getDialogue(dialogueId);
     if (lines.isEmpty) return;
 
@@ -103,18 +134,72 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     await completer.future;
   }
 
-  Future<void> startSceneOneSequence() async {
-    await loadMap('begin.tmx', spawnX: 616, spawnY: 454);
-    await Future.delayed(const Duration(seconds: 5));
-    for (int i = 1; i <= 6; i++) {
-      await _showDialogueAndWait('scene1_$i');
-      await Future.delayed(const Duration(seconds: 2));
-    }
-    await _showDialogueAndWait('scene1_7');
-    await Future.delayed(const Duration(milliseconds: 700));
-    currentScene = 2;
-    await loadMap('office_place.tmx', spawnX: 160, spawnY: 128);
-    await _showDialogueAndWait('scene1_wake_office');
+  Future<void> spawnGridNpc({
+    required String spriteAsset,
+    required Vector2 position,
+    required String dialogueId,
+    required int startCol,
+    required int startRow,
+    int gridCols = 12,
+    int gridRows = 8,
+    int amount = 3,
+    double stepTime = 0.22,
+    bool autoTrigger = false,
+  }) async {
+    await world.addAll([
+      NpcComponent(
+        spriteAsset: spriteAsset,
+        position: position,
+        amount: amount,
+        stepTime: stepTime,
+      ),
+      WallHitbox(
+        position: Vector2(position.x - 8, position.y),
+        size: Vector2(24, 30),
+      ),
+      InteractableZone(
+        dialogueId: dialogueId,
+        autoTrigger: autoTrigger,
+        position: Vector2(position.x - 18, position.y - 18),
+        size: Vector2(36, 36),
+      ),
+    ]);
+  }
+
+  Future<void> spawnNpc({
+    required String spriteAsset,
+    required Vector2 position,
+    required String dialogueId,
+    int amount = 6,
+    double stepTime = 0.18,
+    Vector2? frameSize,
+    Vector2? texturePosition,
+    bool autoTrigger = false,
+  }) async {
+    world.add(
+      NpcComponent(
+        spriteAsset: spriteAsset,
+        position: Vector2(position.x, position.y - 16),
+        amount: amount,
+        stepTime: stepTime,
+        frameSize: frameSize,
+        texturePosition: texturePosition,
+      ),
+    );
+    world.add(
+      WallHitbox(
+        position: Vector2(position.x + 4, position.y + 16),
+        size: Vector2(16, 14),
+      ),
+    );
+    world.add(
+      InteractableZone(
+        dialogueId: dialogueId,
+        autoTrigger: autoTrigger,
+        position: Vector2(position.x - 6, position.y - 6),
+        size: Vector2(36, 36),
+      ),
+    );
   }
 
   void _parsePortals() {
@@ -180,6 +265,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     }
   }
 
+  bool isCutsceneActive = false;
 
   void startDialogue(List<DialogueLine> lines) {
     if (lines.isEmpty) return;
@@ -199,7 +285,9 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     if (_dialogueQueue.isEmpty) {
       activeDialogue.value = null;
       overlays.remove('DialogueOverlay');
-      player.canMove = true;
+      if (!isCutsceneActive) {
+        player.canMove = true;
+      }
       return;
     }
 
@@ -250,7 +338,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
         debugPrint('Audio "$audioAsset" failed to play.');
       }
     }
-    await Future.delayed(const Duration(milliseconds: 650));
+    await Future.delayed(const Duration(milliseconds: 250));
     overlays.remove('JumpscareOverlay');
     activeJumpscare.value = null;
   }
@@ -258,11 +346,23 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
 
 class NpcComponent extends SpriteAnimationComponent with HasGameRef<MorselessGame> {
   final String spriteAsset;
+  final int amount;
+  final double stepTime;
+  final Vector2 frameSize;
+  final Vector2 texturePosition;
+  final bool loop;
 
   NpcComponent({
     required this.spriteAsset,
     required super.position,
-  }) : super(size: Vector2(24, 48));
+    this.amount = 6,
+    this.stepTime = 0.16,
+    Vector2? frameSize,
+    Vector2? texturePosition,
+    this.loop = true,
+  })  : frameSize = frameSize ?? Vector2(16, 32),
+        texturePosition = texturePosition ?? Vector2(16 * 18, 0),
+        super(size: Vector2(24, 48), anchor: Anchor.center, priority: 10);
 
   @override
   Future<void> onLoad() async {
@@ -271,10 +371,11 @@ class NpcComponent extends SpriteAnimationComponent with HasGameRef<MorselessGam
       animation = SpriteAnimation.fromFrameData(
         sheet,
         SpriteAnimationData.sequenced(
-          amount: 6,
-          stepTime: 0.18,
-          textureSize: Vector2(16, 32),
-          texturePosition: Vector2(16 * 18, 0),
+          amount: amount,
+          stepTime: stepTime,
+          textureSize: frameSize,
+          texturePosition: texturePosition,
+          loop: loop,
         ),
       );
     } catch (e) {

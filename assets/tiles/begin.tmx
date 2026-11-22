@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="12">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="29">
  <tileset firstgid="1" source="black.tsx"/>
  <tileset firstgid="17" source="TALLGRASS.tsx"/>
  <tileset firstgid="18" source="WOODTILE.tsx"/>
@@ -77,19 +77,69 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="Interactables"/>
+ <objectgroup id="4" name="Interactables">
+  <object id="7" x="768.667" y="334.667" width="32.3333" height="27">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bed"/>
+   </properties>
+  </object>
+  <object id="12" x="507.167" y="392.833" width="42.3333" height="35">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bed"/>
+   </properties>
+  </object>
+  <object id="13" x="668.5" y="396.167" width="38.3333" height="29.6667">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bed"/>
+   </properties>
+  </object>
+  <object id="14" x="506.5" y="520.833" width="39.6667" height="28.3333">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bed"/>
+   </properties>
+  </object>
+  <object id="15" x="765.833" y="554.833" width="35.6667" height="32.3333">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bed"/>
+   </properties>
+  </object>
+  <object id="16" x="767.167" y="453.5" width="32.3333" height="16.3333">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_tv"/>
+   </properties>
+  </object>
+  <object id="19" x="603.167" y="285.5" width="39.6667" height="55.6667">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_door"/>
+   </properties>
+  </object>
+  <object id="20" x="453.167" y="290.167" width="51" height="21">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene1_bath"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="5" name="Portals"/>
  <objectgroup id="3" name="Collisions">
   <object id="1" x="327" y="201" width="620" height="56"/>
   <object id="2" x="865" y="226" width="82" height="451"/>
   <object id="3" x="294" y="673" width="655" height="65"/>
   <object id="4" x="297" y="230" width="84" height="453"/>
-  <object id="5" x="610" y="293" width="27" height="45"/>
-  <object id="6" x="456" y="292" width="42" height="12"/>
-  <object id="7" x="772" y="336" width="23" height="21"/>
-  <object id="8" x="674" y="402" width="26" height="25"/>
-  <object id="9" x="771" y="559" width="27" height="26"/>
-  <object id="10" x="515" y="398" width="28" height="28"/>
-  <object id="11" x="515" y="530" width="26" height="24"/>
+  <object id="21" x="458.667" y="293.333" width="42" height="12.6667"/>
+  <object id="22" x="608.667" y="291.333" width="30.6667" height="46.6667"/>
+  <object id="23" x="773.333" y="338.667" width="23.3333" height="19.3333"/>
+  <object id="24" x="673.333" y="398.667" width="28.6667" height="23.3333"/>
+  <object id="25" x="772.667" y="458" width="22" height="8.66667"/>
+  <object id="26" x="772.667" y="560" width="24" height="23.3333"/>
+  <object id="27" x="512.667" y="524" width="28" height="20"/>
+  <object id="28" x="512" y="396.667" width="30" height="28"/>
  </objectgroup>
 </map>
