@@ -20,6 +20,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
   final Set<String> storyFlags = {};
 
   final ValueNotifier<bool> isTransitioning = ValueNotifier(false);
+  final ValueNotifier<SpriteAnimation?> activeJumpscareAnimation = ValueNotifier(null);
   final ValueNotifier<DialogueLine?> activeDialogue = ValueNotifier(null);
   final ValueNotifier<String?> activeJumpscare = ValueNotifier(null);
   final ValueNotifier<InteractableZone?> nearbyPrompt = ValueNotifier(null);
@@ -46,6 +47,13 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
       _parsePortals();
       _parseInteractables();
       await spawnNpcsForMap(fileName);
+      if (fileName == 'reception.tmx' && !storyFlags.contains('entered_reception_first_time')) {
+        storyFlags.add('entered_reception_first_time');
+        await _playReceptionEntryJumpscare(
+          sheetAsset: 'reception.png.png',
+          audioAsset: 'jumpscare_1.wav',
+        );
+      }
     } catch (e) {
       debugPrint('Map "$mapFileName" not found yet ($e). Loading fallback test room.');
       world.removeAll(world.children);
@@ -71,36 +79,28 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
 
     if (mapName == 'office_place.tmx') {
       //Sara
-      await spawnGridNpc(
+      await spawnNpc(
         spriteAsset: 'Characters/Amelia_idle_anim_16x16.png',
-        position: Vector2(120, 180),
+        position: Vector2(873, 261),
         dialogueId: 'scene2_sara',
-        startCol: 0,
-        startRow: 2,
       );
       //Hamza
-      await spawnGridNpc(
+      await spawnNpc(
         spriteAsset: 'Characters/Bob_idle_anim_16x16.png',
-        position: Vector2(260, 180),
+        position: Vector2(941, 757),
         dialogueId: 'scene2_hamza',
-        startCol: 0,
-        startRow: 0,
       );
       //Chan
-      await spawnGridNpc(
-        spriteAsset: 'Characters/char_poke_2.png',
+      await spawnNpc(
+        spriteAsset: 'Chan.png',
         position: Vector2(120, 260),
         dialogueId: 'scene2_chan',
-        startCol: 9,
-        startRow: 1,
       );
       //Mitchell
-      await spawnGridNpc(
-        spriteAsset: 'Characters/char_poke_2.png',
-        position: Vector2(260, 260),
+      await spawnNpc(
+        spriteAsset: 'Mitchell.png',
+        position: Vector2(335, 750),
         dialogueId: 'scene2_mitchell',
-        startCol: 0,
-        startRow: 6,
       );
     }
   }
@@ -166,40 +166,82 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     ]);
   }
 
+  Future<void> _playReceptionEntryJumpscare({
+    required String sheetAsset,
+    String? audioAsset,
+    int frameCount = 6,
+    double stepTime = 0.08,
+    Vector2? frameSize,
+  }) async {
+    try {
+      final sheet = await images.load(sheetAsset);
+      final resolvedFrameSize = frameSize ??
+          Vector2(
+            sheet.width / frameCount,
+            sheet.height.toDouble(),
+          );
+
+      final anim = SpriteAnimation.fromFrameData(
+        sheet,
+        SpriteAnimationData.sequenced(
+          amount: frameCount,
+          stepTime: stepTime,
+          textureSize: resolvedFrameSize,
+          loop: false,
+        ),
+      );
+
+      activeJumpscareAnimation.value = anim;
+      overlays.add('ReceptionJumpscareOverlay');
+
+      if (audioAsset != null && audioAsset.isNotEmpty) {
+        try {
+          await FlameAudio.play(audioAsset);
+        } catch (_) {
+          debugPrint('Audio "$audioAsset" failed to play.');
+        }
+      }
+
+      final totalDurationMs = (frameCount * stepTime * 1000).round().clamp(250, 5000);
+      await Future.delayed(Duration(milliseconds: totalDurationMs));
+    } catch (e) {
+      debugPrint('Failed to load reception jumpscare sheet "$sheetAsset": $e');
+    } finally {
+      overlays.remove('ReceptionJumpscareOverlay');
+      activeJumpscareAnimation.value = null;
+    }
+  }
+
   Future<void> spawnNpc({
     required String spriteAsset,
     required Vector2 position,
     required String dialogueId,
     int amount = 6,
-    double stepTime = 0.18,
+    double stepTime = 0.16,
     Vector2? frameSize,
     Vector2? texturePosition,
     bool autoTrigger = false,
   }) async {
-    world.add(
+    await world.addAll([
       NpcComponent(
         spriteAsset: spriteAsset,
-        position: Vector2(position.x, position.y - 16),
+        position: position,
         amount: amount,
         stepTime: stepTime,
         frameSize: frameSize,
         texturePosition: texturePosition,
       ),
-    );
-    world.add(
       WallHitbox(
-        position: Vector2(position.x + 4, position.y + 16),
+        position: Vector2(position.x - 8, position.y + 10),
         size: Vector2(16, 14),
       ),
-    );
-    world.add(
       InteractableZone(
         dialogueId: dialogueId,
         autoTrigger: autoTrigger,
-        position: Vector2(position.x - 6, position.y - 6),
-        size: Vector2(36, 36),
+        position: Vector2(position.x - 24, position.y - 6),
+        size: Vector2(48, 46),
       ),
-    );
+    ]);
   }
 
   void _parsePortals() {

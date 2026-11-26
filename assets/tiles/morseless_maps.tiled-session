@@ -1,5 +1,5 @@
 {
-    "activeFile": "office_place.tmx",
+    "activeFile": "reception.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -98,7 +98,7 @@
                 4
             ],
             "scale": 1.5,
-            "selectedLayer": 4,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 640.3333333333333,
                 "y": 480
@@ -124,8 +124,8 @@
         },
         "elevator.tmx": {
             "expandedObjectLayers": [
-                4,
-                5
+                5,
+                4
             ],
             "scale": 2.6635,
             "selectedLayer": 4,
@@ -187,13 +187,14 @@
         "office_place.tmx": {
             "expandedObjectLayers": [
                 6,
+                5,
                 7
             ],
-            "scale": 0.75,
-            "selectedLayer": 4,
+            "scale": 1.5,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 624.6666666666666,
-                "y": 437.99999999999994
+                "x": 640.3333333333333,
+                "y": 480
             }
         },
         "outside_player_house.tmx": {
@@ -227,10 +228,10 @@
                 9
             ],
             "scale": 0.75,
-            "selectedLayer": 5,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 400.66666666666663,
-                "y": 320
+                "x": 958.6666666666666,
+                "y": 327.33333333333326
             }
         },
         "road_five.tmx": {
@@ -295,8 +296,8 @@
         },
         "schop_one.tmx": {
             "expandedObjectLayers": [
-                4,
-                5
+                5,
+                4
             ],
             "scale": 0.4406,
             "selectedLayer": 0,
@@ -337,16 +338,15 @@
         "schop_one.tmx",
         "begin.tmx",
         "TALLGRASS.tsx",
-        "SNOW.tsx",
-        "Alex_16x16.tsx"
+        "SNOW.tsx"
     ],
     "project": "morseless_maps.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
         "friend_house_ground.tmx",
         "friend_house_basement.tmx",
         "friend_house_first.tmx",
-        "Alex_16x16.tsx",
+        "office_place.tmx",
         "SNOW.tsx",
         "TALLGRASS.tsx",
         "begin.tmx",
@@ -354,7 +354,7 @@
         "elevator.tmx",
         "road_two.tmx",
         "reception.tmx",
-        "office_place.tmx"
+        "Alex_16x16.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

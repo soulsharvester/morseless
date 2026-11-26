@@ -30,43 +30,67 @@ class DialogueStyles {
     ),
     'james': SpeakerStyle(
       backgroundColor: Color(0xEB09121C),
-      iconAsset: 'assets/images/alex_head.png',
+      iconAsset: 'assets/images/alex_head.png', //just alex
       fallbackIcon: Icons.person,
       accentColor: Colors.lightBlueAccent,
     ),
     'boss': SpeakerStyle(
       backgroundColor: Color(0xEB1C1508),
-      iconAsset: 'assets/images/icons/boss.png',
+      iconAsset: 'assets/images/Adam_head.png', //regular adam
       fallbackIcon: Icons.business_center,
       accentColor: Colors.amber,
     ),
     'hadel': SpeakerStyle(
       backgroundColor: Color(0xEB0B1A12),
-      iconAsset: 'assets/images/icons/hadel.png',
+      iconAsset: 'assets/images/hadel_head.png', //bob w brown hair
+      fallbackIcon: Icons.person_outline,
+      accentColor: Colors.tealAccent,
+    ),
+    'chan': SpeakerStyle(
+      backgroundColor: Color(0xEB0B1A12),
+      iconAsset: 'assets/images/Chan_head.png', //chan, adam with black hair
+      fallbackIcon: Icons.person_outline,
+      accentColor: Colors.tealAccent,
+    ),
+    'sara': SpeakerStyle(
+      backgroundColor: Color(0xEB0B1A12),
+      iconAsset: 'assets/images/Sara.png', //amelia
+      fallbackIcon: Icons.person_outline,
+      accentColor: Colors.tealAccent,
+    ),
+    'hamza': SpeakerStyle(
+      backgroundColor: Color(0xEB0B1A12),
+      iconAsset: 'assets/images/hamza_head.png', //bob
+      fallbackIcon: Icons.person_outline,
+      accentColor: Colors.tealAccent,
+    ),
+    'mitchell': SpeakerStyle(
+      backgroundColor: Color(0xEB0B1A12),
+      iconAsset: 'assets/images/Mitchell_head.png', //amelia high contrast
       fallbackIcon: Icons.person_outline,
       accentColor: Colors.tealAccent,
     ),
     'receptionist': SpeakerStyle(
       backgroundColor: Color(0xEB170D1F),
-      iconAsset: 'assets/images/icons/receptionist.png',
+      iconAsset: 'assets/images/recep_head.png',  //amelia blonde
       fallbackIcon: Icons.support_agent,
       accentColor: Colors.purpleAccent,
     ),
     'man with bat': SpeakerStyle(
       backgroundColor: Color(0xEB1F0606),
-      iconAsset: 'assets/images/icons/man_with_bat.png',
+      iconAsset: 'assets/images/bad_person_head.png', //alex black
       fallbackIcon: Icons.warning_amber_rounded,
       accentColor: Colors.red,
     ),
     'mother': SpeakerStyle(
       backgroundColor: Color(0xEB1A1118),
-      iconAsset: 'assets/images/icons/mother.png',
+      iconAsset: 'assets/images/mother_head.png', //amelia black
       fallbackIcon: Icons.favorite_border,
       accentColor: Colors.pinkAccent,
     ),
     'banker': SpeakerStyle(
       backgroundColor: Color(0xEB0D1710),
-      iconAsset: 'assets/images/icons/banker.png',
+      iconAsset: 'assets/images/banker_head.png', //bob black asian
       fallbackIcon: Icons.account_balance,
       accentColor: Colors.greenAccent,
     ),

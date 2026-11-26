@@ -236,6 +236,35 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                 },
               );
             },
+            'ReceptionJumpscareOverlay': (context, game) {
+              return ValueListenableBuilder<SpriteAnimation?>(
+                valueListenable: game.activeJumpscareAnimation,
+                builder: (context, anim, _) {
+                  if (anim == null) return const SizedBox.shrink();
+                  final ticker = anim.createTicker();
+                  final frameSize = anim.frames.first.sprite.srcSize;
+
+                  return IgnorePointer(
+                    ignoring: true,
+                    child: Container(
+                      color: Colors.black,
+                      child: FittedBox(
+                        fit: BoxFit.cover,
+                        clipBehavior: Clip.hardEdge,
+                        child: SizedBox(
+                          width: frameSize.x,
+                          height: frameSize.y,
+                          child: SpriteAnimationWidget(
+                            animation: anim,
+                            animationTicker: ticker,
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
             'JumpscareOverlay': (context, game) {
               return ValueListenableBuilder<String?>(
                 valueListenable: game.activeJumpscare,

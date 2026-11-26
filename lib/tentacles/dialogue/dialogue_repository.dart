@@ -1,7 +1,32 @@
 import 'dialogue_model.dart';
+import 'dart:math';
 
 class DialogueRepository {
+  static final Random _random = Random();
+
+  static final Map<String, List<String>> _randomPool = {
+    'scene2_bookshelf': [
+      "Alex Rider 'Crocodile Tears' was a good read",
+      "Why are there mr men books in here?",
+      "Who genuinely reads these national geographic books?",
+      "Mostly binders full of old report forms from years ago.",
+    ],
+    'scene2_pc': [
+      "The slow flickering is giving me a headache",
+      "One of the tabs say 'How to avoid sleep paralysis",
+      "One of the tabs say 'how many sleep pills is too much?'",
+      "This computer smells like lamb",
+    ],
+  };
   static List<DialogueLine> getDialogue(String id) {
+    if (_randomPool.containsKey(id)) {
+      final options = _randomPool[id]!;
+      final chosenText = options[_random.nextInt(options.length)];
+      return [
+        DialogueLine(speaker: 'James', text: chosenText),
+      ];
+    }
+
     return _scripts[id] ??
         [
           DialogueLine(
@@ -214,6 +239,42 @@ class DialogueRepository {
               text: 'Hope you have a great time, sounds delightful.'),
         ],
       ),
+    ],
+    'scene2_printer' : [
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "This printer looks like it hasnt been used in years?"),
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "I guess its not much of a surprise"),
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "We dont really generate much revenue"),
+    ],
+    'scene2_water' : [
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "Why does fountain water always taste so weird"),
+    ],
+    'scene2_table' : [
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "This table is larger than your-"),
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "Ill spare you for now"),
+    ],
+    'scene2_bin' : [
+      DialogueLine(
+          speaker: 'James',
+          text:
+          "I dont remember the last time this bin was emptied"),
     ],
 
     'scene3_receptionist': [

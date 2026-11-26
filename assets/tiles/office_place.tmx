@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="52">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="81">
  <tileset firstgid="1" source="Pixel Interiors 32x32pxl.tsx"/>
  <tileset firstgid="188" source="TILESET INDOORS +Bathroom.tsx"/>
  <tileset firstgid="269" source="Office_BuildingTiles_32x32.tsx"/>
@@ -143,7 +143,92 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="5" name="Interactables"/>
+ <objectgroup id="5" name="Interactables">
+  <object id="53" x="72.6667" y="78" width="19.3333" height="44.6667">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_water"/>
+   </properties>
+  </object>
+  <object id="68" x="197" y="79.6667" width="22" height="45.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_water"/>
+   </properties>
+  </object>
+  <object id="69" x="901" y="75" width="23.3333" height="46.6667">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_water"/>
+   </properties>
+  </object>
+  <object id="70" x="540.333" y="75" width="38.6666" height="50">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_bookshelf"/>
+   </properties>
+  </object>
+  <object id="71" x="669" y="75.6666" width="69.3333" height="50.6667">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_bookshelf"/>
+   </properties>
+  </object>
+  <object id="72" x="488.333" y="232.333" width="19.3333" height="19.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_bin"/>
+   </properties>
+  </object>
+  <object id="73" x="227.667" y="319.667" width="32" height="41.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_pc"/>
+   </properties>
+  </object>
+  <object id="74" x="483.667" y="268" width="27.3333" height="47.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_water"/>
+   </properties>
+  </object>
+  <object id="75" x="227.333" y="669.333" width="32" height="41.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_pc"/>
+   </properties>
+  </object>
+  <object id="76" x="285.333" y="771.333" width="56.6667" height="39.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_pc"/>
+   </properties>
+  </object>
+  <object id="77" x="900.667" y="768.667" width="56" height="33.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_pc"/>
+   </properties>
+  </object>
+  <object id="78" x="1207.33" y="874.667" width="32" height="41.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_printer"/>
+   </properties>
+  </object>
+  <object id="79" x="1208" y="100" width="37.3333" height="54.0001">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_printer"/>
+   </properties>
+  </object>
+  <object id="80" x="568" y="463.333" width="108" height="41.3334">
+   <properties>
+    <property name="autoTrigger" type="bool" value="true"/>
+    <property name="dialogueId" value="scene2_table"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="6" name="Portals">
   <properties>
    <property name="lockMessage" value=""/>
@@ -160,8 +245,8 @@
     <property name="locked" type="bool" value="false"/>
     <property name="maxScene" type="int" value="0"/>
     <property name="minScene" type="int" value="0"/>
-    <property name="spawnX" type="float" value="129"/>
-    <property name="spawnY" type="float" value="135"/>
+    <property name="spawnX" type="float" value="225"/>
+    <property name="spawnY" type="float" value="63"/>
     <property name="targetMap" value="elevator.tmx"/>
    </properties>
   </object>

@@ -56,8 +56,8 @@
     <property name="locked" type="bool" value="false"/>
     <property name="maxScene" type="int" value="0"/>
     <property name="minScene" type="int" value="0"/>
-    <property name="spawnX" type="float" value="73"/>
-    <property name="spawnY" type="float" value="181"/>
+    <property name="spawnX" type="float" value="351"/>
+    <property name="spawnY" type="float" value="160"/>
     <property name="targetMap" value="reception.tmx"/>
    </properties>
   </object>

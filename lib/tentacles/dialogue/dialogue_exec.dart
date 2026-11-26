@@ -4,7 +4,7 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:morseless/tentacles/morseless_game.dart';
 
 class MorselessDialogueExec extends MorselessGame {
-  static final Vector2 bossDeskPosition = Vector2(220, 140);
+  static final Vector2 bossDeskPosition = Vector2(1133, 506);
 
   static const String bossIdleAsset = 'Characters/Adam_idle_anim_16x16.png';
   static const String bossWalkAsset = 'Characters/Adam_run_16x16.png';
@@ -27,17 +27,17 @@ class MorselessDialogueExec extends MorselessGame {
 
   @override
   Future<void> startSceneOneSequence() async {
-    await loadMap('begin.tmx', spawnX: 616, spawnY: 454);
-    await Future.delayed(const Duration(seconds: 5));
-    for (int i = 1; i <= 6; i++) {
-      await showDialogueAndWait('scene1_$i');
-      await Future.delayed(const Duration(seconds: 2));
-    }
-    await showDialogueAndWait('scene1_7');
-    await Future.delayed(const Duration(milliseconds: 700));
+    // await loadMap('begin.tmx', spawnX: 616, spawnY: 454);
+    // await Future.delayed(const Duration(seconds: 5));
+    // for (int i = 1; i <= 6; i++) {
+    //   await showDialogueAndWait('scene1_$i');
+    //   await Future.delayed(const Duration(seconds: 2));
+    // }
+    // await showDialogueAndWait('scene1_7');
+    // await Future.delayed(const Duration(milliseconds: 700));
 
     currentScene = 2;
-    await loadMap('office_place.tmx', spawnX: 160, spawnY: 128);
+    await loadMap('office_place.tmx', spawnX: 297, spawnY: 351);
     await _runSceneTwoOfficeCutsceneAndWalk();
   }
 
@@ -75,7 +75,7 @@ class MorselessDialogueExec extends MorselessGame {
 
     final walkingBoss = NpcComponent(
       spriteAsset: bossWalkAsset,
-      position: Vector2(bossDeskPosition.x + 96, bossDeskPosition.y),
+      position: Vector2(140, 600),
       amount: 6,
       stepTime: 0.11,
       frameSize: characterFrameSize,
