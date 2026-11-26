@@ -278,13 +278,7 @@ class DialogueRepository {
     ],
 
     'scene3_receptionist': [
-      DialogueLine(
-        speaker: 'James',
-        text: 'AH!',
-        triggerJumpscare: true,
-        jumpscareAsset: 'assets/images/Jumpscare.png',
-        audioAsset: 'jumpscare.wav',
-      ),
+      DialogueLine(speaker: 'James', text: 'AH!'),
       DialogueLine(speaker: 'Receptionist', text: "What's that in your hands?"),
       DialogueLine(
           speaker: 'Receptionist', text: "Oh that's the report I requested."),

@@ -1,5 +1,5 @@
 {
-    "activeFile": "reception.tmx",
+    "activeFile": "elevator.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -124,14 +124,14 @@
         },
         "elevator.tmx": {
             "expandedObjectLayers": [
-                5,
-                4
+                4,
+                5
             ],
             "scale": 2.6635,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 127.83930917965085,
-                "y": 128.0270321006195
+                "x": 128.0270321006195,
+                "y": 127.83930917965084
             }
         },
         "fancy_mansion_furnitureset.tsx": {
@@ -168,8 +168,8 @@
         },
         "friend_house_ground.tmx": {
             "expandedObjectLayers": [
-                10,
-                11
+                11,
+                10
             ],
             "scale": 1.1873,
             "selectedLayer": 6,
@@ -186,9 +186,9 @@
         },
         "office_place.tmx": {
             "expandedObjectLayers": [
+                7,
                 6,
-                5,
-                7
+                5
             ],
             "scale": 1.5,
             "selectedLayer": 5,
@@ -228,10 +228,10 @@
                 9
             ],
             "scale": 0.75,
-            "selectedLayer": 3,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 958.6666666666666,
-                "y": 327.33333333333326
+                "x": 370.6666666666667,
+                "y": 227.33333333333326
             }
         },
         "road_five.tmx": {
@@ -296,8 +296,8 @@
         },
         "schop_one.tmx": {
             "expandedObjectLayers": [
-                5,
-                4
+                4,
+                5
             ],
             "scale": 0.4406,
             "selectedLayer": 0,
@@ -347,13 +347,13 @@
         "friend_house_basement.tmx",
         "friend_house_first.tmx",
         "office_place.tmx",
+        "reception.tmx",
+        "road_two.tmx",
         "SNOW.tsx",
         "TALLGRASS.tsx",
         "begin.tmx",
         "schop_one.tmx",
         "elevator.tmx",
-        "road_two.tmx",
-        "reception.tmx",
         "Alex_16x16.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",

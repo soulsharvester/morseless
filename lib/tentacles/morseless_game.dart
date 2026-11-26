@@ -30,13 +30,16 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
   List<DialogueLine> _dialogueQueue = [];
   static const double defaultZoom = 3.0;
 
+  Future<void> onMapLoaded(String mapFileName) async {}
+  Future<void> onMapReady(String mapFileName) async {}
+
   Future<void> loadMap(String mapFileName, {required double spawnX, required double spawnY}) async {
     isTransitioning.value = true;
     overlays.add('TransitionOverlay');
     await Future.delayed(const Duration(milliseconds: 350));
 
+    final fileName = mapFileName.endsWith('.tmx') ? mapFileName : '$mapFileName.tmx';
     try {
-      final fileName = mapFileName.endsWith('.tmx') ? mapFileName : '$mapFileName.tmx';
       final loadedMap = await TiledComponent.load(fileName, Vector2.all(32));
 
       world.removeAll(world.children);
@@ -47,13 +50,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
       _parsePortals();
       _parseInteractables();
       await spawnNpcsForMap(fileName);
-      if (fileName == 'reception.tmx' && !storyFlags.contains('entered_reception_first_time')) {
-        storyFlags.add('entered_reception_first_time');
-        await _playReceptionEntryJumpscare(
-          sheetAsset: 'reception.png.png',
-          audioAsset: 'jumpscare_1.wav',
-        );
-      }
+      await onMapLoaded(fileName);
     } catch (e) {
       debugPrint('Map "$mapFileName" not found yet ($e). Loading fallback test room.');
       world.removeAll(world.children);
@@ -72,6 +69,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
     isTransitioning.value = false;
     await Future.delayed(const Duration(milliseconds: 350));
     overlays.remove('TransitionOverlay');
+    await onMapReady(fileName);
   }
 
   Future<void> spawnNpcsForMap(String mapName) async {
@@ -169,7 +167,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
   Future<void> _playReceptionEntryJumpscare({
     required String sheetAsset,
     String? audioAsset,
-    int frameCount = 6,
+    int frameCount = 48,
     double stepTime = 0.08,
     Vector2? frameSize,
   }) async {
@@ -185,6 +183,7 @@ class MorselessGame extends FlameGame with HasCollisionDetection, HasKeyboardHan
         sheet,
         SpriteAnimationData.sequenced(
           amount: frameCount,
+          amountPerRow: 8,
           stepTime: stepTime,
           textureSize: resolvedFrameSize,
           loop: false,

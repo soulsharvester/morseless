@@ -181,6 +181,36 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                 },
               );
             },
+            'ReceptionJumpscareOverlay': (context, game) {
+              return ValueListenableBuilder<SpriteAnimation?>(
+                valueListenable: game.activeJumpscareAnimation,
+                builder: (context, anim, _) {
+                  if (anim == null) return const SizedBox.shrink();
+
+                  final frameSize = anim.frames.first.sprite.srcSize;
+
+                  return IgnorePointer(
+                    child: Container(
+                      color: Colors.black,
+                      width: double.infinity,
+                      height: double.infinity,
+                      child: FittedBox(
+                        fit: BoxFit.contain, // fills the screen; use BoxFit.contain to avoid cropping
+                        clipBehavior: Clip.hardEdge,
+                        child: SizedBox(
+                          width: frameSize.x,   // 800
+                          height: frameSize.y,  // 640
+                          child: SpriteAnimationWidget(
+                            animation: anim,
+                            animationTicker: anim.createTicker(),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
             'CutsceneOverlay': (context, game) {
               return ValueListenableBuilder<SpriteAnimation?>(
                 valueListenable: game.activeCutsceneAnimation,
@@ -198,7 +228,7 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                         fit: StackFit.expand,
                         children: [
                           FittedBox(
-                            fit: BoxFit.cover,
+                            fit: BoxFit.contain,
                             clipBehavior: Clip.hardEdge,
                             child: SizedBox(
                               width: frameSize.x,
@@ -230,35 +260,6 @@ class _MorselessGameScreenState extends State<MorselessGameScreen> {
                             },
                           ),
                         ],
-                      ),
-                    ),
-                  );
-                },
-              );
-            },
-            'ReceptionJumpscareOverlay': (context, game) {
-              return ValueListenableBuilder<SpriteAnimation?>(
-                valueListenable: game.activeJumpscareAnimation,
-                builder: (context, anim, _) {
-                  if (anim == null) return const SizedBox.shrink();
-                  final ticker = anim.createTicker();
-                  final frameSize = anim.frames.first.sprite.srcSize;
-
-                  return IgnorePointer(
-                    ignoring: true,
-                    child: Container(
-                      color: Colors.black,
-                      child: FittedBox(
-                        fit: BoxFit.cover,
-                        clipBehavior: Clip.hardEdge,
-                        child: SizedBox(
-                          width: frameSize.x,
-                          height: frameSize.y,
-                          child: SpriteAnimationWidget(
-                            animation: anim,
-                            animationTicker: ticker,
-                          ),
-                        ),
                       ),
                     ),
                   );
