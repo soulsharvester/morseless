@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flame: ^1.18.0
+  flame_tiled: ^1.20.0
+  flame_audio: ^2.10.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -61,6 +64,9 @@ flutter:
   assets:
      - assets/tiles/
      - assets/images/
+     - assets/images/Urban/
+     - assets/images/Terrain/
+     - assets/images/Characters/
      - assets/audio/
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,10 +1,18 @@
 {
-    "activeFile": "schop_one.tmx",
+    "activeFile": "elevator.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "fileStates": {
+        "Alex_16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "BIGWINDOW.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "BRICKS.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -16,7 +24,19 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "CafeFoodSheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Office_BuildingTiles_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Exterior_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Furniture_32x32.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -40,6 +60,14 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Sky Platform Deco Set.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TALLGRASS.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "TILESET INDOORS +Bathroom.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -48,47 +76,106 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
-        "cafe.tmx": {
-            "scale": 1.361171875,
+        "WOODA.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "WOODTILE.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Wooden_Floor_Horizontal.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Wooden_Floor_Vertical.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "begin.tmx": {
+            "expandedObjectLayers": [
+                3,
+                4
+            ],
+            "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 320.3122309590771,
-                "y": 239.86684267921714
+                "x": 640.3333333333333,
+                "y": 480
+            }
+        },
+        "black.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "cafe.tmx": {
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 1.1139,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 319.5978094981596,
+                "y": 239.24948379567292
             }
         },
         "classic_furnitureset.tsx": {
             "scaleInDock": 1
         },
         "elevator.tmx": {
-            "scale": 3.265625,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
+            "scale": 2.6635,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 128,
-                "y": 127.84688995215309
+                "x": 128.0270321006195,
+                "y": 127.83930917965084
             }
         },
+        "fancy_mansion_furnitureset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fancy_mansion_room_door_tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "friend_house_basement.tmx": {
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
             "scale": 0.3949,
-            "selectedLayer": 1,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 612.8133704735377,
-                "y": 874.905039250443
+                "x": 798.9364396049633,
+                "y": 800.2025829323879
             }
         },
         "friend_house_first.tmx": {
-            "scale": 1.361171875,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
+            "scale": 1.1969,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 320.3122309590771,
-                "y": 239.86684267921714
+                "x": 320.411061909934,
+                "y": 239.78611412816446
             }
         },
         "friend_house_ground.tmx": {
-            "scale": 1.0889375,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                11,
+                10
+            ],
+            "scale": 1.1873,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 400.3902886988464,
-                "y": 320.0367330540092
+                "x": 399.64625621157245,
+                "y": 319.21165670007576
             }
         },
         "makeshift_furnitureset.tsx": {
@@ -98,133 +185,180 @@
             "scaleInDock": 1
         },
         "office_place.tmx": {
-            "scale": 0.6805859375,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                7,
+                6,
+                5
+            ],
+            "scale": 1.5,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 640.6244619181542,
-                "y": 479.7336853584343
+                "x": 640.3333333333333,
+                "y": 480
             }
         },
         "outside_player_house.tmx": {
-            "scale": 0.6776171875,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                5
+            ],
+            "scale": 0.75,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 650.8099383178649,
-                "y": 489.2142733613881
+                "x": 1561.3333333333333,
+                "y": 479.33333333333326
             }
         },
         "player_house.tmx": {
+            "expandedObjectLayers": [
+                10
+            ],
             "scale": 1.8069791666666666,
-            "selectedLayer": 4,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 239.9031532829884,
-                "y": 191.4797947771949
+                "x": 187.60592609673142,
+                "y": 191.75649968294232
             }
         },
         "professional_kitchen.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.4594,
             "scaleInEditor": 1
         },
         "reception.tmx": {
-            "scale": 1.0889375,
-            "selectedLayer": -1,
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 0.75,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 400.3902886988464,
-                "y": 320.0367330540092
+                "x": 370.6666666666667,
+                "y": 227.33333333333326
             }
         },
         "road_five.tmx": {
-            "scale": 0.6805859375,
-            "selectedLayer": 3,
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 0.8253,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 640.6244619181542,
-                "y": 400.39028869884635
+                "x": 640.9790379256027,
+                "y": 399.248758027384
             }
         },
         "road_four.tmx": {
-            "scale": 0.8708333333333332,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 0.7434,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 320.38277511961724,
-                "y": 479.42583732057426
+                "x": 318.80548829701377,
+                "y": 479.55340328221683
             }
         },
         "road_one.tmx": {
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
             "scale": 0.54209375,
-            "selectedLayer": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 799.6771776099613,
-                "y": 479.62183662881176
+                "x": 1197.2098922003802,
+                "y": 478.69948694298716
             }
         },
         "road_three.tmx": {
-            "scale": 0.7778124999999999,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                6,
+                5
+            ],
+            "scale": 0.9259,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 560.546404178385,
-                "y": 400.48212133386903
+                "x": 307.8086186413219,
+                "y": 415.2716276055729
             }
         },
         "road_two.tmx": {
+            "expandedObjectLayers": [
+                7,
+                8
+            ],
             "scale": 0.6805859375,
-            "selectedLayer": 3,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 639.1551397577916,
-                "y": 479.7336853584343
+                "x": 639.8898008379729,
+                "y": 480.46834643861564
             }
         },
         "schop_one.tmx": {
-            "scale": 0.75,
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
+            "scale": 0.4406,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1152,
-                "y": 275.33333333333326
+                "x": 800.0453926463913,
+                "y": 640.0363141171131
+            }
+        },
+        "sky.tmx": {
+            "scale": 0.5225,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 800.0000000000001,
+                "y": 799.0430622009569
             }
         },
         "snow_nature_tileset.tsx": {
+            "scaleInDock": 1.0276,
+            "scaleInEditor": 1
+        },
+        "tilesetOpenGameBackground.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Terrain",
-    "map.height": 50,
+    "last.imagePath": "C:/Users/damus/AndroidStudioProjects/morseless/assets/images/Characters",
+    "map.height": 40,
     "map.lastUsedFormat": "tmx",
     "map.width": 50,
     "openFiles": [
-        "player_house.tmx",
-        "outside_player_house.tmx",
-        "road_one.tmx",
-        "road_two.tmx",
-        "schop_one.tmx",
-        "Office_Walls_32x32.tsx",
-        "BIGWINDOW.tsx",
-        "Brick_wall.tsx",
-        "Brick_Wall_Cracked.tsx",
-        "snow_nature_tileset.tsx",
-        "Tilemap.tsx",
-        "PAVEMENT.tsx",
-        "SNOW.tsx",
-        "professional_kitchen.tsx",
-        "Office_BuildingTiles_32x32.tsx",
-        "Office_Terrain_32x32.tsx",
+        "friend_house_ground.tmx",
+        "friend_house_basement.tmx",
+        "friend_house_first.tmx",
+        "office_place.tmx",
         "reception.tmx",
-        "Pixel Interiors 32x32pxl.tsx",
-        "TILESET INDOORS +Bathroom.tsx"
+        "road_two.tmx",
+        "elevator.tmx",
+        "schop_one.tmx",
+        "begin.tmx",
+        "TALLGRASS.tsx",
+        "SNOW.tsx"
     ],
     "project": "morseless_maps.tiled-project",
+    "property.type": "string",
     "recentFiles": [
-        "player_house.tmx",
-        "outside_player_house.tmx",
-        "road_one.tmx",
-        "road_two.tmx",
-        "TILESET INDOORS +Bathroom.tsx",
-        "Pixel Interiors 32x32pxl.tsx",
+        "friend_house_ground.tmx",
+        "friend_house_basement.tmx",
+        "friend_house_first.tmx",
+        "office_place.tmx",
         "reception.tmx",
-        "Office_Terrain_32x32.tsx",
-        "Office_BuildingTiles_32x32.tsx",
-        "professional_kitchen.tsx",
+        "road_two.tmx",
         "SNOW.tsx",
-        "PAVEMENT.tsx"
+        "TALLGRASS.tsx",
+        "begin.tmx",
+        "schop_one.tmx",
+        "elevator.tmx",
+        "Alex_16x16.tsx"
     ],
-    "tileset.lastUsedFormat": "tsx"
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }
